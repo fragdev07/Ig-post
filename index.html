@@ -7,7 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+
+      #slider img:not(img:first-child){
+        display: none;
+      }
+    
+    </style>
   </head>
   <body class="m-0 p-0 box-border h-screen w-full flex items-center justify-center bg-[#fff] font-['Roboto']  select-none">
     <div id="ig-post" class="w-[95%] h-[] sm:w-[480px] sm:h-[661px] bg-[#111] rounded-2xl overflow-hidden">
@@ -54,10 +61,27 @@
         </div>
       </div>
 
-      <div id="post-media" class="w-full h-[405px]  relative">
+      <div id="post-media" class="w-full h-[405px]  relative overflow-hidden">
         <span id="like-effect" class="absolute z-[200] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 ">
           <svg width="84px" height="84px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z" fill="#ffffff"></path> </g></svg>
         </span>
+        <span id="prev-arrow" class="absolute z-[200] top-[50%] right-[10px] w-[30px] h-[30px] rounded-[50%] bg-[#111] flex items-center justify-center cursor-pointer">
+          <svg width="28px" height="28px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="layer1"> <path d="M 8,5.2910156 7.2929688,6 7.6464844,6.3535156 11.292969,10 7.6464844,13.646484 7.2929688,14 8,14.708984 8.3535156,14.353516 12.708984,10 8.3535156,5.6464844 Z" style="fill:#ffffff; fill-opacity:1; stroke:none; stroke-width:0px;"></path> </g> </g>
+          </svg>
+        </span>
+        <span id="next-arrow" class="absolute z-[200] top-[50%] left-[10px] w-[30px] h-[30px] rounded-[50%] bg-[#111] flex items-center justify-center cursor-pointer">
+          <svg width="28px" height="28px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="matrix(-1, 0, 0, 1, 0, 0)">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="layer1"> <path d="M 8,5.2910156 7.2929688,6 7.6464844,6.3535156 11.292969,10 7.6464844,13.646484 7.2929688,14 8,14.708984 8.3535156,14.353516 12.708984,10 8.3535156,5.6464844 Z" style="fill:#ffffff; fill-opacity:1; stroke:none; stroke-width:0px;"></path> </g> </g>
+          </svg>
+        </span>
+
+        <div id="slider" class="flex items-center justify-center overflow-hidden w-full h-full">
+          <img src="assets/img16.jpg" class="object-cover w-full h-full " alt=""> 
+          <img src="assets/img17.jpg" class="object-cover w-full h-full " alt="">
+          <img src="assets/img19.jpg" class="object-cover w-full h-full " alt="">
+          <img src="assets/img20.jpg" class="object-cover w-full h-full " alt="">
+        </div>
       </div>
 
       <div id="post-foot" class="w-full h-[140px]">
